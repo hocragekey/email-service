@@ -2,6 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
+
 resource "aws_lambda_function" "lebweb_email_lambda" {
   function_name = "lebweb_email_lambda"
   handler = "ses-lambda.handler"
