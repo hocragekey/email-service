@@ -1,4 +1,4 @@
 language: node_js
 node_js:
 - '7'
-script: npm run --prefix lambda/ses-lambda build
+script: npm run build

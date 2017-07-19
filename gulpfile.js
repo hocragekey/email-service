@@ -5,5 +5,5 @@ gulp.task('build', () =>
 	gulp
 		.src('ses-lambda.js')
 		.pipe(zip('ses-lambda.zip'))
-		.pipe(gulp.dest('./../../dist/'))
+		.pipe(gulp.dest('./dist/'))
 );
