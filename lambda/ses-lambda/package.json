@@ -1,0 +1,28 @@
+{
+  "name": "ses-lambda",
+  "version": "1.0.0",
+  "description": "This is the lambda function for my email service that also includes validation of google reCaptcha in the form that is submitting the contact email.",
+  "main": "ses-lambda.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hocragekey/email-service.git"
+  },
+  "keywords": [
+    "terraform",
+    "aws",
+    "lambda"
+  ],
+  "author": "Jim Lebonitte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hocragekey/email-service/issues"
+  },
+  "homepage": "https://github.com/hocragekey/email-service#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-zip": "^4.0.0"
+  }
+}
