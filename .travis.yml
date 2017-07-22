@@ -9,3 +9,22 @@ env:
     secure: xJeeBkldPrAXjIv2mN0W/edX23pmsbxiwBH5uxTtPog6BT/Fz+IXjXBNv0ZafIP/Vzb+QC0voLOBGpiiPW/nEv2DIPYIArAG6907pbYf8gHsKJ9aY0GhlbMeAdBlANso87K1BJzRB4OhbAAotcfmX7UN02foFYZR+pYkM5tRSW1k73YsOn4ADCZ9ClJO2Oma6h1AiDQRowiFexBu4GT6N6MAoYivnIg28APLqLY+cjG/1GDPnQ162Xb+TKU3NqHKZXou153PeF1KzqymdkwWh/fzPCmwzTDdta1qLajkoQYABHKw9yG7k+aTxlJL7OcXecG2K4VJhP7jDzY8cngZHdv1Ow3NK4AzMZ7YnT4fG5VupACOC0JIQEieU5mqBpajIBPP2SSjY4M7OHH9N0BA1J2qu/MOMoWbFBPWtAwwXzfXNsmRZvMmOND87myMsq+17Eav9MojrYbb3YLobl16Fc74JHNcDIRaLCuePKGnU7QJed3yHE5coALII1/hvLlgEe4mO7ZFulHyCgvbbrBSPr6UgCMzoPUaMBFHyh8SXTzrHYpUrlEJg5lH6TvxwBfbmIL03kSB9ZtTVGaAS5C/gbSKSWOgMcitpQ2KElDAtbf/OouLAYYCR7MmFR6Cseku88ZqUsjy1b8OE+dnqIwAtzvMlnQWRKG/Ak5u9HwsM3Q=
   token:
     secure: x5eQ0LZAoKzL2qL9tMONIayYJMkd0t8ruzipIZ1chUAnT2m5ps01csPtX95vjgCPDdrZW21mdTHkZ0EsdpONXyur9F2omQVAlyUuVMuBLmNVfH/xp5txKUyvGX+8XG6ShAqh8wzl54s4lDXrVIrSvgdHM8wU5Jg55zOlP/nQMEae7aJ6iZd2kuzZ3Rd3AzHni83VW3YqyFflgWcI/OFK0+YIi4/sJK/GopoPIIA4pnpd/kW2Q2BxP6Ktu7ptlZpjQUrXaWA1ko35ivkuxbqOzVFvGq1NLa421oXCD0B5xjQYLZLCfY4pw24rcFoYghtO3iRtcYsuoYudPVU3UmKbtd+ZDsbcdtzwAPEpBH7EBiQVZG9U3RpmCltXNUrz93A4rU7l5vdQiNkU+3WnAkvpDDRvXcTg/qOSmhZmn4Ux2ICyJQo/MKUDrUa58Koj+Ta/QrYs16puWBpQqmD1jWBokvWBcRE1RRtjIK4neLi9ihBosEhzJct0DoiUXuEyGBW5N1SnjxRphtPPg4uvwtsOnEgfURSUfYiYBLK7Aw/vgO4bSzJ1Se2i4kxlnD10sQ9/X6pXzmfTc9DoiwF4aVPIqZs9mG3Elm7/jE1LgAWpkEkWaHMb0THiuEMlVg1WvlCNXAWqy6gOdgRZyYarn8BpgulI3mubgexiUYWMDLShz5I=
+
+install:
+  - npm install
+
+script:
+  - npm run build
+
+# install terraform
+before_deploy:
+  - curl -fSL "https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip" -o terraform.zip
+  - sudo unzip terraform.zip -d /opt/terraform
+  - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
+  - rm -f terraform.zip
+
+# terraform apply
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: "./deploy.sh"
