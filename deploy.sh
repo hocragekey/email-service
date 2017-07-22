@@ -1,4 +1,5 @@
 #!/bin/bash
+set -o errexit -o nounset
 cd tf
 terraform plan
 terraform apply
