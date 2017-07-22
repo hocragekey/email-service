@@ -8,8 +8,8 @@ resource "aws_lambda_function" "lebweb_email_lambda" {
   handler = "ses-lambda.handler"
   role = "${aws_iam_role.default.arn}"
   runtime = "nodejs6.10"
-  filename = "./dist/ses-lambda.zip"
-  source_code_hash = "${base64sha256(file("./dist/ses-lambda.zip"))}"
+  filename = "./../dist/ses-lambda.zip"
+  source_code_hash = "${base64sha256(file("./../dist/ses-lambda.zip"))}"
 }
 
 resource "aws_iam_role" "default" {
