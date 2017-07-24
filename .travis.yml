@@ -1,30 +1,29 @@
 language: node_js
 node_js:
 - '7'
-script: npm run build
+script:
+- npm run build
 env:
+  - AWS_DEFAULT_REGION=us-east-1
   user:
     secure: vF8L/GMO9svESFWG+O0+NsHwZCAIpIk/MTi8r5yrYZhF9ASk2/Cfr2AwXuR/zH2opE+858A9Uc6Cy4lZkGUfVY3sJ6MCCVl+GoLpJnTnuyxsd3JZky7pce5p7SqEYMFzw/kG0RHsvd5JXPrkAwYPId+X96QOkB2pRR7ISRhT0Ue9GT/CIQa9p8y7SGoAgVuDwrSZt1+OpGqi7DHFh5X07LrgPGHvGKE18e+YiEWNL+qOzF7KsQ4RCDPKfSgAwqrE2jf5r4ESKEAaFr+OVsrFmpDalRyhe1kyNDCvGOg72LqaYtf667Y4VpEIKkAgtMrT2vDtAgUZ30GIqcSoUMhQp+UwsIe8ujFYV0WkbC/SbU9AQa7WxvXvOigbAgooz0BT0FNHzG5jcJk5IsmC1BR0iQpaql3BS718Sq+yCBt4d8LX+BJ4aKLPJkEYhK3V/ikNrVzshbowrOq5ezxS4rAMGY1LxtN4ZYH3lzcElWQLOXHKJf9uRrRAd1ghWbj+DWSXJFvAjA51hJ0pSsScF2Xx4r0m8gh4mUXMm8DT7XSu7yj3nuCj7kCZa2lcw0uBOReGo6AWlspV2lUYnJjtqSri6ORoOFioN8vhYqfZks0hMhTSCwpBTBc7Ati+8VXQVcUZ7WLA1MaU/MVt3YrRJH+r1V3u/sk206OCzXHxEwdOkew=
   email:
     secure: xJeeBkldPrAXjIv2mN0W/edX23pmsbxiwBH5uxTtPog6BT/Fz+IXjXBNv0ZafIP/Vzb+QC0voLOBGpiiPW/nEv2DIPYIArAG6907pbYf8gHsKJ9aY0GhlbMeAdBlANso87K1BJzRB4OhbAAotcfmX7UN02foFYZR+pYkM5tRSW1k73YsOn4ADCZ9ClJO2Oma6h1AiDQRowiFexBu4GT6N6MAoYivnIg28APLqLY+cjG/1GDPnQ162Xb+TKU3NqHKZXou153PeF1KzqymdkwWh/fzPCmwzTDdta1qLajkoQYABHKw9yG7k+aTxlJL7OcXecG2K4VJhP7jDzY8cngZHdv1Ow3NK4AzMZ7YnT4fG5VupACOC0JIQEieU5mqBpajIBPP2SSjY4M7OHH9N0BA1J2qu/MOMoWbFBPWtAwwXzfXNsmRZvMmOND87myMsq+17Eav9MojrYbb3YLobl16Fc74JHNcDIRaLCuePKGnU7QJed3yHE5coALII1/hvLlgEe4mO7ZFulHyCgvbbrBSPr6UgCMzoPUaMBFHyh8SXTzrHYpUrlEJg5lH6TvxwBfbmIL03kSB9ZtTVGaAS5C/gbSKSWOgMcitpQ2KElDAtbf/OouLAYYCR7MmFR6Cseku88ZqUsjy1b8OE+dnqIwAtzvMlnQWRKG/Ak5u9HwsM3Q=
   token:
     secure: x5eQ0LZAoKzL2qL9tMONIayYJMkd0t8ruzipIZ1chUAnT2m5ps01csPtX95vjgCPDdrZW21mdTHkZ0EsdpONXyur9F2omQVAlyUuVMuBLmNVfH/xp5txKUyvGX+8XG6ShAqh8wzl54s4lDXrVIrSvgdHM8wU5Jg55zOlP/nQMEae7aJ6iZd2kuzZ3Rd3AzHni83VW3YqyFflgWcI/OFK0+YIi4/sJK/GopoPIIA4pnpd/kW2Q2BxP6Ktu7ptlZpjQUrXaWA1ko35ivkuxbqOzVFvGq1NLa421oXCD0B5xjQYLZLCfY4pw24rcFoYghtO3iRtcYsuoYudPVU3UmKbtd+ZDsbcdtzwAPEpBH7EBiQVZG9U3RpmCltXNUrz93A4rU7l5vdQiNkU+3WnAkvpDDRvXcTg/qOSmhZmn4Ux2ICyJQo/MKUDrUa58Koj+Ta/QrYs16puWBpQqmD1jWBokvWBcRE1RRtjIK4neLi9ihBosEhzJct0DoiUXuEyGBW5N1SnjxRphtPPg4uvwtsOnEgfURSUfYiYBLK7Aw/vgO4bSzJ1Se2i4kxlnD10sQ9/X6pXzmfTc9DoiwF4aVPIqZs9mG3Elm7/jE1LgAWpkEkWaHMb0THiuEMlVg1WvlCNXAWqy6gOdgRZyYarn8BpgulI3mubgexiUYWMDLShz5I=
-
+  access_key:
+    secure: mkFyObvnT2/WB6kPQ4k7FNkcXx6tkms5p8vaWe3j8EeJKwX9nQVjXY0zYwjOpSnJRLzrP4CFO4VelK+WlHXQfsE1X/ABuR8Ya5lbmwsgyXGj1P41YaPxBsgvloodimGha8PNPNQMtbX5E+3vrugyD8nQpVxcle8/nvLQ2BiMqLPyKGv5Aln0ESJIP0Q2kI6PFX2t8mbw0C5eR1Kdr6eEhOYhL/IAg2czs4CRrRzdgYXC31f8/YVzl4isvqHjNk1Oa/Wfi3YMJNu6mej5MGGXik7DF8jT9/x9NOLccPJu5vt+w2svpB8y0bB3S/U9n3afk2CwgsTeHJGxNc8s0FJwhiL+JdOmOrMRYhFlf9FIqYrrFXJeySTFeZsiReTn/72Hl0chBmxmHNC7rsuhNJErLF186DHR8OEf5cpEt+Ny7iTOcYijezemb1ubxXphlMe/Z8aXYrhhNrv3svK8D/6KpyBdJzKUZCCSR3lUBnDR5lvkSvwByq8OQ19yw/s7ItAxbqlrq75zOvK6pONgNHrq2c8TDXfUBTlCJJUjYo/TAIh+wjvPB7hgXM1gAl25em4wO2ymk35GysKF2XVDcEUEIpTI857VyRqLSmRpDY8Hjm0BAvRjL4BbGejV/RWmxuBGbjthUmKk5jCMoO7jAV32rFF6quy9GA4B6bEH41R5fLQ=
+  secret_access_key:
+    secure: cN/qTsvX+9xxH7gHwnxMQtRzVDqCSNtbaVMVmoxNFJCxnlg3ituFf9PTqaFrvZcyFc1pRnWcGvp71YYJ9KXgn6GKCyrzvr/PF89+diQ3KrOnqYWeGxzxuKvVeF0lsHW+sypV01zDCFQsAefj4f85neOeK61C+6G65qzIbFVDmdHV/V/+J1J6nsQJNTQjnTgsHDZrWDTGk6LsCoN0bsLIS27NTFCyXH1pOmcMiFufajpjaaqoPftV5ss1aG+TdmzAgA7fjt94qQUmHtlHXoPPh0nbt+1+68w2kkHU4tjqSKsNKFy/AruFHOfZ9YVfX5HHTN36kHJ0wK8gXvgfwvtyjgzclAmckpe6hGDm8lKKe2pH2l0aozu3Cdvn7tmR51Rnf+K4TNsavQRzUD3cWZmQlmZapS4h3iqyT+nMwPqHl5X8cm5+RJEUUAjt6hz0zL/S/fhonniuF+ads+00l5cyH6Z10gG8KlTC9aalgoVEk/i5YJsH3C9hSlTTCJX3auCbqW+NaXRUrP4wO8tMJADiG+CUvC7lA9HEytnWHLrAGqXFkfgWmyD+8p3p7NABA+TOhFOAp5QKl46mwTb769LvktYcYcdLPWbliaJ4K/n+0TFuHGl0RomFuxFvmLxweq//y6Wgk3Xyb4wlsdZoyJPzb0f9/cCuwGiV6gBkJNHJ914=
 install:
-  - npm install
-
-script:
-  - npm run build
-
-# install terraform
+- npm install
 before_deploy:
-  - curl -fSL "https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip" -o terraform.zip
-  - sudo unzip terraform.zip -d /opt/terraform
-  - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
-  - rm -f terraform.zip
-
-# terraform apply
+- curl -fSL "https://releases.hashicorp.com/terraform/0.9.11/terraform_0.9.11_linux_amd64.zip"
+  -o terraform.zip
+- sudo unzip terraform.zip -d /opt/terraform
+- sudo ln -s /opt/terraform/terraform /usr/bin/terraform
+- rm -f terraform.zip
 deploy:
-  - provider: script
-    skip_cleanup: true
-    script: "./deploy.sh"
+- provider: script
+  skip_cleanup: true
+  script: ./deploy.sh
