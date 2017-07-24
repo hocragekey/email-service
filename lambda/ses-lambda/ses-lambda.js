@@ -8,6 +8,7 @@ var http = require('http'),
 exports.handler = function(event, context, callback) {
 	console.log('Event: ', JSON.stringify(event, null, '\t'));
 	console.log('Context: ', JSON.stringify(context, null, '\t'));
+	console.log('validate github update');
 	validateRecaptcha(
 		event.secret,
 		event.response,
