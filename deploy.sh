@@ -1,6 +1,7 @@
 #!/bin/bash
 set -o errexit -o nounset
 cd tf
+export TF_VAR_account_id=$AWS_ACCESS_KEY_ID
 terraform plan
 terraform apply
 
