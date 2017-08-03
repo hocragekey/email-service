@@ -14,4 +14,4 @@ git remote add upstream "https://$GH_TOKEN@github.com/$GH_USER_NAME/email-servic
 git checkout master
 git add .
 git commit -m "tfstate: $NOW [ci skip]"
-git push upstream master
+git push upstream master 
