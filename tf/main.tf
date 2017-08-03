@@ -66,7 +66,7 @@ resource "aws_api_gateway_integration" "email_method_integration" {
   resource_id = "${aws_api_gateway_resource.lebweb_send_email.id}"
   http_method = "${aws_api_gateway_method.email_api_method.http_method}"
   type = "AWS_PROXY"
-  uri = "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:${var.account_id}:function:${aws_lambda_function.lebweb_email_lambda.function_name}/invocations"
+  uri = "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:118938645536:function:${aws_lambda_function.lebweb_email_lambda.function_name}/invocations"
   integration_http_method = "POST"
 }
 
