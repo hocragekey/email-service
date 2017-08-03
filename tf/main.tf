@@ -73,6 +73,7 @@ resource "aws_api_gateway_integration" "email_method_integration" {
 # deploy the API
 resource "aws_api_gateway_deployment" "lebweb_email_api_deployment" {
   rest_api_id = "${aws_api_gateway_rest_api.lebweb_email_api.id}"
+  depends_on = ["aws_api_gateway_method.email_api_method"]
   stage_name  = "production"
 }
 
